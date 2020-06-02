@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { getClient } from "../utils/algolia";
+import CustomError from "../utils/CustomError";
 
 export default async function searchController(req: Request, res: Response) {
   try {
@@ -7,10 +8,7 @@ export default async function searchController(req: Request, res: Response) {
     const params = req.body.params || {};
 
     if (!indexName) {
-      const error = new Error("index is required");
-      error.name = "required-params";
-      error.status = 500;
-      throw error;
+      throw new CustomError("index is required", "required-params", 400);
     }
 
     const algolia = await getClient();
