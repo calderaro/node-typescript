@@ -1,8 +1,8 @@
 import express from "express";
-import HelloController from "./controllers/hello";
+import searchController from "./controllers/search";
 
 const router = express.Router();
 
-router.get("/", HelloController);
+router.post("/search", searchController);
 
 export default router;
