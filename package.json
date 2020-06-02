@@ -1,0 +1,21 @@
+{
+  "name": "node-ts",
+  "version": "1.0.0",
+  "description": "node typescript boilerplate ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "angel calderaro",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "typescript": "^3.9.3"
+  }
+}
